@@ -25,7 +25,6 @@ Own your code history. VaultX is an open-source, self-hosted VCS built on MERN a
   - [Local Development](#local-development)
   - [Environment Variables](#environment-variables)
 - [AWS Deployment](#-aws-deployment)
-- [Project Structure](#-project-structure)
 - [API Reference](#-api-reference)
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
@@ -241,45 +240,6 @@ A sample workflow is included at `.github/workflows/deploy.yml` that:
 ---
 
 ---
-## 📁 Project Structure
-
-vaultx/
-├── client/                     # React frontend
-│   ├── public/
-│   └── src/
-│       ├── components/         # Reusable UI components
-│       ├── pages/              # Route-level page components
-│       ├── store/              # Zustand state management
-│       ├── hooks/              # Custom React hooks
-│       ├── services/           # Axios API service layer
-│       └── utils/
-│
-├── server/                     # Express.js backend
-│   ├── src/
-│   │   ├── controllers/        # Route handlers
-│   │   ├── models/             # Mongoose schemas
-│   │   ├── routes/             # Express route definitions
-│   │   ├── middleware/         # Auth, error handling, rate limiting
-│   │   ├── services/           # Business logic layer
-│   │   │   ├── git/            # Core VCS engine (diff, merge, tree)
-│   │   │   ├── storage/        # S3 blob storage service
-│   │   │   └── ssh/            # SSH server & key management
-│   │   ├── jobs/               # Background job processors
-│   │   └── utils/
-│   ├── .env.example
-│   └── ecosystem.config.js     # PM2 config
-│
-├── deploy/
-│   ├── nginx.conf
-│   └── docker-compose.prod.yml
-│
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-│
-├── docker-compose.yml
-└── README.md
-
 
 ## 📡 API Reference
 
