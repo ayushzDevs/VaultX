@@ -35,7 +35,7 @@ Own your code history. VaultX is an open-source, self-hosted VCS built on MERN a
 ## 🧭 Overview
 
 **VaultX** is an open-source, self-hosted version control system inspired by Git and GitHub — but built entirely from scratch using the MERN stack. It gives individuals and teams full control over their repositories, commit history, branching, and collaboration features without relying on third-party platforms.
-
+ 
 Designed for developers who want:
 - **Data sovereignty** — all code stays on your own infrastructure
 - **Custom workflows** — tailor permissions, branching rules, and CI hooks
