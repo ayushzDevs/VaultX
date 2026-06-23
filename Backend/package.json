@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "VaultX , a vcs for India",
   "dependencies": {
+    "express": "^5.2.1",
     "yargs": "^18.0.0"
   }
 }
