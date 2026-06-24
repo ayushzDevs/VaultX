@@ -3,4 +3,4 @@ function initRepo (){
 }
 
 
-module.exports = initRepo;
+module.exports = {initRepo};
