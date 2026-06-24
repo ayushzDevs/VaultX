@@ -1,4 +1,4 @@
-function initRepo (){
+async function initRepo (){
     console.log("command called")
 }
 
