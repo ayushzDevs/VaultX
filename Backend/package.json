@@ -1,15 +1,16 @@
 {
   "name": "backend",
-  "version": "1.0.0",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "module": "app.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.6"
   },
-  "author": "Ayush",
-  "license": "ISC",
-  "description": "VaultX , a vcs for India",
+  "peerDependencies": {
+    "typescript": "^5"
+  },
   "dependencies": {
-    "yargs": "^18.0.0"
+    "express": "^5.2.1"
   }
 }
