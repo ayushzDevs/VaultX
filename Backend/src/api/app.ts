@@ -3,7 +3,8 @@ import cors from "cors"
 import { FRONTEND_URL } from '../lib/env';
 import yargs from "yargs";
 import {hideBin} from "yargs/helpers";
-import {initRepo} from "../modules/init/init"
+import { init, addFile } from "../infrastructure/commands/commands";
+
 
 const app = express();
 
@@ -18,10 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-yargs(hideBin(process.argv)).command("init",
-     "initialises a new repository",
-     {}, 
-     initRepo)
+yargs(hideBin(process.argv))
+    .command(init)
+    .command(addFile)
      .demandCommand(1,
         "you need atleast one command")
         .help()
