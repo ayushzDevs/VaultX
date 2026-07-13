@@ -51,14 +51,14 @@ export const Push : CommandModule = {
     command : "push",
     describe : "push your channges",
     builder : (yargs)=>
-        yargs.positional("push", {type:"boolean", describe:"push your changes", demandOption:true}),
+        yargs.positional("push", {type:"string", describe:"push your changes", demandOption:true}),
         handler: async (argv:ArgumentsCamelCase)=>{
             await pushCommand();
         }
 }
 
 export const revert : CommandModule = {
-    command : "revert",
+    command : "revert <commitID>",
     describe : "revert or undo previous changes",
     builder : (yargs)=>
         yargs.positional("push",{type:"string", describe:"revert previous changes", demandOption:true}),
