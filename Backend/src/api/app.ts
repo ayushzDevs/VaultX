@@ -3,7 +3,7 @@ import cors from "cors"
 import { FRONTEND_URL } from '../lib/env';
 import yargs from "yargs";
 import {hideBin} from "yargs/helpers";
-import { init, addFile } from "../infrastructure/commands/commands";
+import { init, addFile , Commit , Pull, Push, revert } from "../infrastructure/commands/commands";
 
 
 const app = express();
@@ -22,6 +22,10 @@ app.use(express.urlencoded({ extended: true }));
 yargs(hideBin(process.argv))
     .command(init)
     .command(addFile)
+    .command(Commit)
+    .command(Pull)
+    .command(Push)
+    .command(revert)
      .demandCommand(1,
         "you need atleast one command")
         .help()
