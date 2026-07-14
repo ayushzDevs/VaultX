@@ -1,8 +1,11 @@
 {
-  "name": "backend",
+  "name": "vaultx",
   "module": "app.ts",
   "type": "module",
   "private": true,
+  "bin": {
+    "vaultx": "src/api/app.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/express": "^5.0.6"
