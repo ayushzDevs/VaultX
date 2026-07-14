@@ -13,18 +13,18 @@ export const init : CommandModule = {
     handler : async (argv : ArgumentsCamelCase)=>{
         await initRepo();
     }
-}
+};
 
-export const addFile : CommandModule = {
-    command : "add <file>",
-    describe : "add a file to be pushed",
+export const addFile: CommandModule<{}, { file: string }> = {
+    command: "add <file>",
+    describe: "add a file to be pushed",
     builder: (yargs) =>
         yargs.positional("file", { type: "string", describe: "file to add", demandOption: true }),
-        handler: async (argv : ArgumentsCamelCase) => {
-        await addfile();
-        }
-
+    handler: async (argv) => {
+        await addfile(argv.file); // argv.file is string, inferred correctly
+    }
 }
+
 
 export const Commit : CommandModule = {
     command : "commit changhes",
