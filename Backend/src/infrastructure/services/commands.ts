@@ -26,13 +26,13 @@ export const addFile: CommandModule<{}, { file: string }> = {
 }
 
 
-export const Commit : CommandModule = {
-    command : "commit changhes",
-    describe : "commit changes in repo",
+export const Commit : CommandModule<{}, { messages: string }> = {
+    command : "commit <messages>",
+    describe : "commit changes messages in repo",
     builder : (yargs)=>
-        yargs.positional("changes", {type:"string" , describe:"commit changes in repo", demandOption : true}),
-        handler: async (argv:ArgumentsCamelCase)=>{
-            await commitCommand();
+        yargs.positional("messages", {type:"string" , describe:"commit changes in repo", demandOption : true}),
+    handler: async (argv)=>{
+            await commitCommand(argv.messages);
         }
     
 }
